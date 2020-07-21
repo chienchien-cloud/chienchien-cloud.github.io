@@ -1,0 +1,30 @@
+
+$screen-l: "screen and (min-width: 1080px)";
+$screen-m: "screen and (min-width: 768px) and (max-width: 1080px - 1px)";
+$screen-s: "screen and (min-width: 560px) and (max-width: 768px - 1px)";
+$screen-xs: "screen and (max-width: 560px - 1px)";
+
+// upper than 1080
+@mixin desktop {
+	@media #{$screen-l} {
+		@content;
+	}
+}
+// from 1080 to 768
+@mixin tablet {
+	@media #{$screen-m} {
+		@content;
+	}
+}
+// from 768 to 560
+@mixin phone {
+	@media #{$screen-s} {
+		@content;
+	}
+}
+// lower than 560
+@mixin small-phone {
+	@media #{$screen-xs} {
+		@content;
+	}
+}

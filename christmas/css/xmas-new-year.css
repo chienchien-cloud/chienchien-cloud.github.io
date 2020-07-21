@@ -1,0 +1,796 @@
+.xmas-new-year * {
+    box-sizing: border-box;
+}
+.xmas-new-year a {
+    text-decoration: none;
+}
+.xmas-new-year ul li, .xmas-new-year ol li{
+    font-size: 0.9rem;
+    line-height: 2;
+    color: #fff;
+}
+.xmas-new-year ul li {
+    list-style: decimal;
+    margin-left: 2%;
+    padding-left: 1%;
+}
+.xmas-new-year ol li{
+    list-style: disc;
+    margin-left: 4%;
+    padding-left: 0;
+}
+.xmas-new-year {
+    font-family: PingFang SC,"微軟雅黑","Microsoft YaHei","黑体",Helvetica Neue,Arial,"微軟正黑體","Microsoft JhengHei",sans-serif;
+    /*text-shadow: 0 1px 5px #03092b;*/
+    overflow: hidden;
+    background-color: #1d1d1d;
+    font-size: 0;
+    position: relative;
+}
+.xmas-new-year .wrap {
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.starbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .5;
+    z-index: 1;
+    pointer-events: none;
+}
+.starbox span {
+    display: inline-block;
+    width: auto;
+    position: absolute;
+    border-radius: 100%;
+    transition: 100s linear ;
+}
+
+#golden {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.animatable {
+
+    /* initially hide animatable objects */
+//visibility: hidden;
+    opacity: 0;
+
+    /* initially pause animatable objects their animations */
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -ms-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+.animated {
+//visibility: visible;
+    opacity: 1;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-play-state: running;
+}
+
+#snow1 {
+    background-color: transparent;
+    background-image: url(../img/snow1.png);
+    -webkit-animation: snow 30s linear infinite;
+    -moz-animation: snow 30s linear infinite;
+    -ms-animation: snow 30s linear infinite;
+    animation: snow 30s linear infinite;
+    transform: scale(2.3);
+    z-index: 1;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin-top: 0;
+    pointer-events: none;
+    position: absolute;
+}
+
+#snow2 {
+    background-color: transparent;
+    background-image: url(../img/snow2.png);
+    -webkit-animation: snow 70s linear infinite;
+    -moz-animation: snow 70s linear infinite;
+    -ms-animation: snow 70s linear infinite;
+    animation: snow 70s linear infinite;
+    transform: scale(2.3);
+    z-index: 1;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin-top: 0;
+    pointer-events: none;
+    position: absolute;
+}
+
+.psuedo-point {
+    padding-top: 30px;
+    margin-top: -30px;
+}
+
+
+/*Keyframes*/
+
+@keyframes snow {
+    0% {
+        background-position: 0px 0px, 0px 0px, 0px 0px ;
+    }
+
+    100% { background-position: 500px 1000px, 100% 100%, 300px 300px;
+    }
+}
+
+/*@-moz-keyframes snow {*/
+    /*0% { */
+        /*background-position: 0px 0px, 0px 0px, 0px 0px;*/
+    /*}*/
+
+    /*100% { */
+        /*background-position: 500px 1000px, 400px 400px, 300px 300px;*/
+    /*}*/
+/*}*/
+
+/*@-webkit-keyframes snow {*/
+    /*0% { */
+        /*background-position: 0px 0px, 0px 0px, 0px 0px;*/
+    /*}*/
+
+    /*100% {*/
+        /*background-position: 500px 1000px, 400px 400px, 300px 300px;*/
+    /*}*/
+/*}*/
+
+/*@-ms-keyframes snow {*/
+    /*0% { */
+        /*background-position: 0px 0px, 0px 0px, 0px 0px }*/
+
+    /*100% { */
+        /*background-position: 500px 1000px, 400px 400px, 300px 300px }*/
+/*}*/
+
+
+
+/*=================內容開始=================*/
+
+.xmas-new-year .banner {
+    background: url("../img/banner-bg.jpg") center no-repeat;
+    background-size: cover;
+    height: 740px;
+    max-height: 90vh;
+    padding-top: 100px;
+    position: relative;
+    background-attachment: fixed;
+}
+
+
+.xmas-new-year .banner-img .banner-title {
+    width: 100%;
+    position: relative;
+}
+
+.xmas-new-year .banner-img .banner-gift {
+    position: absolute;
+    right: 21%;
+    top: 6%;
+    width: 13%;
+    max-width: 152px;
+    max-height: 165px;
+}
+
+.xmas-new-year .banner-img .banner-gift.animated,
+.xmas-new-year .banner-img .banner-leaf.animated{
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-delay: 2s;
+}
+
+.xmas-new-year .banner-img .banner-leaf.animated {
+    animation-delay: 2.5s;
+}
+
+.xmas-new-year .banner-img .banner-leaf {
+    position: absolute;
+    left: 18%;
+    bottom: 10%;
+    width: 13%;
+    max-width: 135px;
+    max-height: 115px;
+}
+.xmas-new-year .about-event {
+    margin-top: -130px;
+    z-index: 2;
+    position: relative;
+}
+.xmas-new-year .about-event .snow-land {
+    display: block;
+    width: 100%;
+}
+
+.xmas-new-year .about-event .describe {
+    background: #fff;
+    text-align: center;
+    line-height: 30px;
+    color: #24292c;
+    font-size: 14px;
+    padding: 40px 0 50px;
+}
+.xmas-new-year .about-event .describe .road {
+    position: relative;
+    height: 70px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.xmas-new-year .about-event .describe .road img {
+    display: inline-block;
+    position: absolute;
+    left: -90%;
+    height: 55%;
+}
+
+
+.xmas-new-year .about-event .describe h3 {
+    font-size: 16px;
+}
+
+.xmas-new-year .about-event .snow-land-bottom {
+    transform: rotate( 180deg );
+    margin-top: -1px;
+}
+
+.xmas-new-year .container {
+    padding: 0 10px;
+}
+
+.xmas-new-year .event-board {
+    /*background: url("../img/event-bg.jpg")center repeat;*/
+    border-radius: 60px;
+    /*padding: 110px 60px 60px;*/
+    font-size: 0;
+    position: relative;
+    margin-top: 220px;
+    box-shadow: 5px 5px 25px 8px rgba(0, 0, 0, .5);
+    z-index: 1;
+}
+.xmas-new-year .event-bg {
+    position: relative;
+    background: url("../img/event-bg.jpg")center repeat;
+    border-radius: 60px;
+    padding: 110px 60px 60px;
+    font-size: 0;
+    box-shadow: 5px 5px 25px 8px #000;
+    z-index: 2;
+}
+.xmas-new-year .event-public {
+    margin-top: 100px;
+}
+
+.xmas-new-year .event-board:before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid #c6b98b;
+
+    /*border-image-source: linear-gradient(135deg, transparent 0%, #c6b98b 50%, transparent 100%);*/
+    /*border-image-slice: 1;*/
+}
+.xmas-new-year .event-board-left:before {
+    right: -20px;
+    border-right: 2px solid #c6b98b;
+    border-radius: 20px 70px 20px 0;
+
+}
+.xmas-new-year .event-board-right:before {
+    left: -20px;
+    border-left: 2px solid #c6b98b;
+    border-radius: 70px 20px 0 20px;
+
+}
+
+.xmas-new-year .event-public:after {
+    content: "";
+    position: absolute;
+    right: -170px;
+    bottom: 30px;
+    background: url("../img/bear.png")top right no-repeat;
+    background-size: contain;
+    width: 224px;
+    height: 286px;
+    z-index: 0;
+    animation-name: wobble;
+    animation-iteration-count: infinite;
+    animation-duration: 0s;
+}
+.xmas-new-year .event-public:hover::after {
+    animation-duration: 3s;
+}
+
+.xmas-new-year .event-vip:after {
+    content: "";
+    position: absolute;
+    left: -150px;
+    bottom: 30px;
+    background: url("../img/raindeer.png")top right no-repeat;
+    background-size: contain;
+    width: 224px;
+    height: 286px;
+    z-index: 0;
+    animation-name: deer;
+    animation-iteration-count: infinite;
+    animation-duration: 0s;
+    animation-delay: 1s;
+
+}
+
+.xmas-new-year .event-vip:hover::after{
+    animation-duration: 7.5s;
+}
+/*.xmas-new-year .event-rule:after {*/
+    /*content: "";*/
+    /*position: absolute;*/
+    /*right: -150px;*/
+    /*bottom: 30px;*/
+    /*background: url("../img/xmas-tree.png")top center no-repeat;*/
+    /*background-size: contain;*/
+    /*width: 100%;*/
+    /*max-width: 863px;*/
+    /*height: 100%;*/
+    /*max-height: 1050px;*/
+    /*z-index: -1;*/
+/*}*/
+
+.xmas-new-year .event-board .snow-cap {
+    position: absolute;
+    top: -10%;
+    left: 0;
+    width: 100%;
+    max-height: 159px;
+}
+
+
+.xmas-new-year .event-board .event-title {
+    display: inline-block;
+    width: 40%;
+    height: inherit;
+    position: relative;
+}
+.xmas-new-year .event-board-left .event-title {
+    display: inline-block;
+    width: 40%;
+    height: inherit;
+    min-height: 100px;
+    position: relative;
+    float: left;
+}
+.xmas-new-year .event-board-right .event-title {
+    display: inline-block;
+    width: 40%;
+    height: inherit;
+    min-height: 100px;
+    position: relative;
+    float: right;
+}
+
+
+.xmas-new-year .event-board-left .event-title .title-round {
+    position: absolute;
+    top: -200px;
+    left: 0;
+    width: 30vw;
+    height: 30vw;
+    max-width: 265px;
+    max-height: 265px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.5);
+}
+
+.xmas-new-year .event-board .event-title .title-round:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: inset 0 5px 30px 5px rgba(0, 0, 0, 0.5);
+}
+
+.xmas-new-year .event-board-left .event-title .title-line {
+    position: absolute;
+    top: -330px;
+    left: 10%;
+    width: 30vw;
+    max-width: 188px;
+}
+.xmas-new-year .event-board-right .event-title .title-round {
+    position: absolute;
+    top: -200px;
+    left: 100px;
+    width: 30vw;
+    height: 30vw;
+    max-width: 265px;
+    max-height: 265px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.5);
+}
+.xmas-new-year .event-board .event-title .title-round img {
+    width: 100%;
+}
+
+.xmas-new-year .event-board-right .event-title .title-line {
+    position: absolute;
+    top: -330px;
+    left: 135px;
+}
+
+.xmas-new-year .event-board .event-info {
+    display: inline-block;
+    width: 59%;
+    font-size: 14px;
+    color: #fff;
+}
+
+.xmas-new-year .event-board .event-info table {
+    border-radius: 10px 10px 5px 5px;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.xmas-new-year .event-board .event-info table thead {
+    background: #fff;
+    color: #24292c;
+}
+
+.xmas-new-year .event-board .event-info table tr {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.xmas-new-year .event-board .event-info table tr td {
+    border: 1px solid #fff;
+    vertical-align: middle;
+    min-width: 100px;
+}
+
+.xmas-new-year .event-footer {
+    position: relative;
+    background: url("../img/bottom-bg.jpg")center no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 40vh;
+    margin-top: -10%;
+}
+.xmas-new-year .event-footer:before {
+    content: "";
+    position: absolute;
+    right: -250px;
+    bottom: -8%;
+    background: url("../img/xmas-tree.png")center bottom no-repeat;
+    background-size: contain;
+    width: 60%;
+    max-width: 863px;
+    height: -webkit-fill-available;
+    max-height: 95vh;
+    /*height: 1050px;*/
+    /*z-index: -1;*/
+}
+
+.xmas-new-year .event-footer img {
+    width: 100%;
+}
+
+/************************************動畫**********************************/
+
+@-webkit-keyframes wobble-animal {
+    from {
+        -webkit-transform: none;
+        transform: none;
+    }
+
+    65% {
+        -webkit-transform: none;
+        transform: none;
+    }
+
+    70% {
+        -webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+        transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    }
+
+    80% {
+        -webkit-transform: translate3d(17%, 0, 0) rotate3d(0, 0, 1, 3deg);
+        transform: translate3d(17%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    }
+
+    85% {
+        -webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+        transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    }
+
+    90% {
+        -webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+        transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    }
+
+    95% {
+        -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+        transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    }
+
+    to {
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+
+@-webkit-keyframes deer {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    10% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    20% {
+        -webkit-transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, -3deg);
+    }
+
+    30%, 50%, 70%, 90% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+
+    40%, 60%, 80% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes wobble {
+    from {
+        -webkit-transform: none;
+        transform: none;
+    }
+
+    15% {
+        -webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+        transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    }
+
+    30% {
+        -webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+        transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    }
+
+    45% {
+        -webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+        transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    }
+
+    60% {
+        -webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+        transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    }
+
+    75% {
+        -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+        transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    }
+
+    to {
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes go-car-blue {
+    0% {
+        left: -65%;
+    }
+    30% {
+        left: -5%;
+    }
+    40% {
+        left: 12%;
+    }
+    50% {
+        left: 20%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+.go-car-blue {
+    animation: go-car-blue 16s  linear infinite;
+    animation-delay: 2s;
+}
+
+@keyframes go-car-red {
+     0% {
+         left: -75%;
+     }
+    30% {
+        left: -74%;
+    }
+    80% {
+        left: 67%;
+    }
+     100% {
+         left: 100%;
+     }
+ }
+
+.go-car-red {
+    animation: go-car-red 18s  linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes go-claus {
+    0% {
+        left: -55%;
+    }
+    20% {
+        left: -55%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.go-claus {
+    animation: go-claus 16s  linear infinite;
+}
+
+
+/************************************RWD**********************************/
+
+@media (max-width: 1024px) {
+    #snow1 {
+        display: none;
+    }
+}
+
+@media (max-width: 850px) {
+    .xmas-new-year .wrap {
+        padding: 0 15px;
+    }
+    .xmas-new-year .event-bg {
+        padding: 110px 40px 60px;
+    }
+    .xmas-new-year .event-board .snow-cap {
+        top: -8%;
+        height: 100%;
+    }
+    .xmas-new-year .event-board-left .event-title .title-round {
+        left: 10%;
+    }
+    .xmas-new-year .event-board-left .event-title .title-line {
+        left: 7%;
+    }
+    .xmas-new-year .event-board-right .event-title .title-round {
+        left: 10%;
+    }
+    .xmas-new-year .event-board-right .event-title .title-line {
+        left: 17%;
+    }
+}
+
+@media (max-width: 700px) {
+    .xmas-new-year .event-bg {
+        padding: 140px 40px 60px;
+    }
+    .xmas-new-year .event-board:before {
+        right: 0;
+        left: 0;
+        top: 0;
+        border-radius: 70px;
+        border: 2px solid #c6b98b;
+        width: 100%;
+    }
+    .xmas-new-year .event-board .event-title {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        float: none;
+        position: absolute;
+        top: -220px;
+        left: 0;
+        z-index: 6;
+    }
+    .xmas-new-year .event-board .event-title .title-line {
+        left: unset;
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        max-width: unset;
+        width: unset;
+        top: unset;
+    }
+    .xmas-new-year .event-board .event-title .title-round {
+        left: unset;
+        top: unset;
+        position: relative;
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        min-width: 180px;
+        min-height: 180px;
+    }
+    .xmas-new-year .event-board .event-info {
+        width: 100%;
+    }
+    .xmas-new-year .event-public:after,
+    .xmas-new-year .event-vip:after{
+        display: none;
+    }
+    .xmas-new-year .event-footer:before {
+        right: -20%;
+        bottom: 0;
+        width: 80%;
+    }
+}
+
+@media (max-width: 500px) {
+    .xmas-new-year .banner {
+        height: 500px;
+    }
+    .xmas-new-year .event-bg {
+        padding: 140px 20px 60px;
+        border-radius: 15px;
+    }
+    .xmas-new-year .event-board:before {
+        border-radius: 20px;
+    }
+    .xmas-new-year .event-board .event-info table tr td {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 400px) {
+    .xmas-new-year .banner {
+        height: 440px;
+    }
+}

@@ -1,0 +1,114 @@
+// Universal
+@mixin boxsizing-borderbox {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+@mixin a-deco($color:red) {
+	text-decoration: none;
+	outline: none;
+	color: $color;
+}
+
+// Font Styles
+@mixin font-styles($size: false, $color: false, $weight: false,  $line: false) {
+    @if $size { font-size: $size; }
+    @if $color { color: $color; }
+    @if $weight { font-weight: $weight; }
+    @if $line { line-height: $line; }
+}
+
+// ::before and ::after
+@mixin pseudo($content: "", $display: block, $position: absolute, $width: null, $height: null) {
+	content: $content;
+	display: $display;
+	position: $position;
+	width: $width;
+	height: $height;
+}
+
+// Background
+@mixin bg($color: black, $image: url("./img/test.jpg"), $size: contain, $position: center, $repeat: no-repeat) {
+	background-color: $color;
+	background-image: $image;
+	background-size: $size;
+	background-position: $position;
+	background-repeat: $repeat;
+}
+
+// Gradient
+@mixin gradient($direction, $list) {
+	background: -webkit-linear-gradient($direction, $list);
+	background: -moz-linear-gradient($direction, $list);
+	background: -o-linear-gradient($direction, $list);
+	background: linear-gradient($direction, $list);
+}
+
+// Three Positions
+@mixin pos-relative {
+	position: relative;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+}
+@mixin pos-absolute($top:null,$right:null,$bottom:null,$left:null,$zindex:null) {
+	position: absolute;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+	z-index: $zindex;
+}
+@mixin pos-fixed($top:null,$right:null,$bottom:null,$left:null,$zindex:null) {
+	position: fixed;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+	z-index: $zindex;
+}
+// Border Radius
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
+
+// 以下很少用
+
+// Responsive Ratio
+@mixin responsive-ratio($x, $y, $pseudo: false) {
+    $padding: unquote( ( $y / $x ) * 100 + '%' );
+    @if $pseudo {
+        &:before {
+            @include pseudo($pos: relative);
+            width: 100%;
+            padding-top: $padding;
+        }
+    } @else {
+        padding-top: $padding;
+    }
+}
+// Truncate 單行斷行
+@mixin truncate($truncation-boundary) {
+    max-width: $truncation-boundary;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+// 滑鼠點選
+@mixin select-none {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+@mixin select-all {
+	-webkit-user-select: all;
+	-moz-user-select: all;
+	-ms-user-select: all;
+	user-select: all;
+}
